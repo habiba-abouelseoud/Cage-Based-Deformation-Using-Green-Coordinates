@@ -1,0 +1,280 @@
+\hypertarget{class_green_coordinates_1_1green__coords__2d}{}\doxysection{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d Class Reference}
+\label{class_green_coordinates_1_1green__coords__2d}\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+
+
+Concrete class for 2D Green coordinates deformation.  
+
+
+
+
+{\ttfamily \#include $<$cage\+\_\+deform\+\_\+gc\+\_\+2\+D\+\_\+3\+D.\+h$>$}
+
+Inheritance diagram for Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_green_coordinates_1_1green__coords__2d}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a299e40a333997ed8955c91f6821d098c}\label{class_green_coordinates_1_1green__coords__2d_a299e40a333997ed8955c91f6821d098c}} 
+{\bfseries green\+\_\+coords\+\_\+2d} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d}{green\+\_\+coords\+\_\+2d}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_aa287a7a6013133ad1365c40a4bffd53a}{load\+\_\+model\+\_\+points}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Load model points from a file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a93296095bef2a2ab8339cd89f7eb05e5}{load\+\_\+cage}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Load the cage from a file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a723719d27ffe6a99594dc576209589e0}{calculate\+\_\+green\+\_\+coords}} ()
+\begin{DoxyCompactList}\small\item\em Calculate the Green coordinates. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a5a0cd10a717a8932c13330d7aeb443cd}{move\+\_\+cage}} (const size\+\_\+t id, const double $\ast$dx, bool disp)
+\begin{DoxyCompactList}\small\item\em Move a cage node by a given displacement. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a3bd4fea43cb1e4f784a0c57af9c3f28e}{deform}} ()
+\begin{DoxyCompactList}\small\item\em Deform the model points using Green coordinates and cage information. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a847d1eea5dad2ec79426f7bef89090d5}{save\+To\+File}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Save the normal information to a file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a8101cb424e11c295ca756f3c07d16ec3}{save\+To\+File\+\_\+normal}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Save the normal information to a file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a5ce3d501b98b792da57d10c491ddcd2e}{save\+To\+File\+\_\+cage}} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Save the cage information to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a87e1d7af1f4d8be4c5b1a2f4baa14444}{calculate\+\_\+outward\+\_\+normal}} ()
+\begin{DoxyCompactList}\small\item\em Calculate the outward normal vectors of the cage edges. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a3540a7637a1151ea07b33b828ff078f7}{calculate\+\_\+cage\+\_\+edge\+\_\+length}} (Eigen\+::\+Vector\+Xd \&len)
+\begin{DoxyCompactList}\small\item\em Calculate the lengths of the cage edges. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete class for 2D Green coordinates deformation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a3540a7637a1151ea07b33b828ff078f7}\label{class_green_coordinates_1_1green__coords__2d_a3540a7637a1151ea07b33b828ff078f7}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!calculate\_cage\_edge\_length@{calculate\_cage\_edge\_length}}
+\index{calculate\_cage\_edge\_length@{calculate\_cage\_edge\_length}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{calculate\_cage\_edge\_length()}{calculate\_cage\_edge\_length()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::calculate\+\_\+cage\+\_\+edge\+\_\+length (\begin{DoxyParamCaption}\item[{Eigen\+::\+Vector\+Xd \&}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calculate the lengths of the cage edges. 
+
+This function calculates the length of each cage edge using the Euclidean norm. The result is stored in the provided {\ttfamily len} vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em len} & The vector to store the calculated edge lengths. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a723719d27ffe6a99594dc576209589e0}\label{class_green_coordinates_1_1green__coords__2d_a723719d27ffe6a99594dc576209589e0}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!calculate\_green\_coords@{calculate\_green\_coords}}
+\index{calculate\_green\_coords@{calculate\_green\_coords}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{calculate\_green\_coords()}{calculate\_green\_coords()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::calculate\+\_\+green\+\_\+coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculate the Green coordinates. 
+
+This function computes the Green coordinates for each point in the {\ttfamily nods\+\_\+} matrix. It iterates over each point and each cage element to calculate the necessary variables, such as vector differences and logarithmic terms, to compute the Green coordinates. The resulting Green coordinates are stored in the {\ttfamily phi\+\_\+} and {\ttfamily psi\+\_\+} matrices.
+
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a1cb2c42957c3002d925716583011fd24}{Green\+Coordinates\+::green\+\_\+coordinates}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a87e1d7af1f4d8be4c5b1a2f4baa14444}\label{class_green_coordinates_1_1green__coords__2d_a87e1d7af1f4d8be4c5b1a2f4baa14444}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!calculate\_outward\_normal@{calculate\_outward\_normal}}
+\index{calculate\_outward\_normal@{calculate\_outward\_normal}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{calculate\_outward\_normal()}{calculate\_outward\_normal()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::calculate\+\_\+outward\+\_\+normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Calculate the outward normal vectors of the cage edges. 
+
+This function calculates the outward normal vector for each cage edge. It first calculates the direction vector of each cage edge and then normalizes it. The resulting outward normal vectors are stored in the {\ttfamily cage\+\_\+normal\+\_\+} matrix.
+
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a3bd4fea43cb1e4f784a0c57af9c3f28e}\label{class_green_coordinates_1_1green__coords__2d_a3bd4fea43cb1e4f784a0c57af9c3f28e}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!deform@{deform}}
+\index{deform@{deform}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{deform()}{deform()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::deform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deform the model points using Green coordinates and cage information. 
+
+This function deforms the model points based on the calculated Green coordinates, cage node positions, cage normals, and the ratio between current and rest segment lengths. It performs the following steps\+:
+
+
+\begin{DoxyEnumerate}
+\item Calculate the outward normal vectors of the cage elements.
+\item Calculate the current segment lengths of the cage edges.
+\item Calculate the ratio between the current and rest segment lengths.
+\item Check if the dimensions of the cage normals and the ratio match. If they don\textquotesingle{}t, return an error code.
+\item Deform the nodal positions using the Green coordinates, cage node positions, cage normals, and ratio. The new nodal positions are calculated as a combination of the weighted cage node positions and the weighted cage normals.
+\end{DoxyEnumerate}
+
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). In case of failure, the line number where the error occurred is returned. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a8ff594b63cb2e34d6de05f41947426c9}{Green\+Coordinates\+::green\+\_\+coordinates}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a93296095bef2a2ab8339cd89f7eb05e5}\label{class_green_coordinates_1_1green__coords__2d_a93296095bef2a2ab8339cd89f7eb05e5}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!load\_cage@{load\_cage}}
+\index{load\_cage@{load\_cage}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{load\_cage()}{load\_cage()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::load\+\_\+cage (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load the cage from a file. 
+
+This function manually parses the file to extract the cage element and node information. The file should contain the number of cage elements, followed by the cage element vertices, and then the number of cage nodes and their coordinates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to load the cage from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). In case of failure, the line number where the error occurred is returned. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a190bc51085ca7845beea0d86eaa09d33}{Green\+Coordinates\+::green\+\_\+coordinates}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_aa287a7a6013133ad1365c40a4bffd53a}\label{class_green_coordinates_1_1green__coords__2d_aa287a7a6013133ad1365c40a4bffd53a}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!load\_model\_points@{load\_model\_points}}
+\index{load\_model\_points@{load\_model\_points}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{load\_model\_points()}{load\_model\_points()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::load\+\_\+model\+\_\+points (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Load model points from a file. 
+
+This function reads nodal and cell data from a file and populates the corresponding data containers. The file format should follow the \char`\"{}v\char`\"{} (nodal coordinates) and \char`\"{}f\char`\"{} (cell connectivity) keywords.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to load the model points from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). In case of failure, the line number where the error occurred is returned. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a0bf41d8d967bb0f9b8de5a2bf4dbd346}{Green\+Coordinates\+::green\+\_\+coordinates}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a5a0cd10a717a8932c13330d7aeb443cd}\label{class_green_coordinates_1_1green__coords__2d_a5a0cd10a717a8932c13330d7aeb443cd}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!move\_cage@{move\_cage}}
+\index{move\_cage@{move\_cage}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{move\_cage()}{move\_cage()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::move\+\_\+cage (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{id,  }\item[{const double $\ast$}]{dx,  }\item[{bool}]{disp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move a cage node by a given displacement. 
+
+This function moves a cage node identified by its index ({\ttfamily id}) by a specified displacement ({\ttfamily dx}). The displacement is provided as a pointer to a double array containing the x and y components. If the {\ttfamily disp} parameter is true, the displacement is added to the current cage node position. If {\ttfamily disp} is false, the cage node position is set to the displacement.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The index of the cage node to move. \\
+\hline
+{\em dx} & Pointer to a double array containing the displacement in x and y components. \\
+\hline
+{\em disp} & Flag indicating whether to add the displacement to the current position or set it as the new position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a6f178cf4ada3f518dcfd60ebb47af5ec}{Green\+Coordinates\+::green\+\_\+coordinates}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a847d1eea5dad2ec79426f7bef89090d5}\label{class_green_coordinates_1_1green__coords__2d_a847d1eea5dad2ec79426f7bef89090d5}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save the normal information to a file. 
+
+This function saves the midpoints and endpoints of the cage edges with the corresponding outward normals to a file. The file can be saved in either OBJ or TRI format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to save the normal information to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). In case of failure, the line number where the error occurred is returned. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a16c7b31f57e8c98d91057e154afb10a7}{Green\+Coordinates\+::green\+\_\+coordinates}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a5ce3d501b98b792da57d10c491ddcd2e}\label{class_green_coordinates_1_1green__coords__2d_a5ce3d501b98b792da57d10c491ddcd2e}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!saveToFile\_cage@{saveToFile\_cage}}
+\index{saveToFile\_cage@{saveToFile\_cage}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{saveToFile\_cage()}{saveToFile\_cage()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::save\+To\+File\+\_\+cage (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Save the cage information to a file. 
+
+This function saves the cage node positions and the cage connectivity information to a file. The file can be saved in either OBJ or TRI format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to save the cage information to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). In case of failure, the line number where the error occurred is returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coords__2d_a8101cb424e11c295ca756f3c07d16ec3}\label{class_green_coordinates_1_1green__coords__2d_a8101cb424e11c295ca756f3c07d16ec3}} 
+\index{GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}!saveToFile\_normal@{saveToFile\_normal}}
+\index{saveToFile\_normal@{saveToFile\_normal}!GreenCoordinates::green\_coords\_2d@{GreenCoordinates::green\_coords\_2d}}
+\doxysubsubsection{\texorpdfstring{saveToFile\_normal()}{saveToFile\_normal()}}
+{\footnotesize\ttfamily int Green\+Coordinates\+::green\+\_\+coords\+\_\+2d\+::save\+To\+File\+\_\+normal (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Save the normal information to a file. 
+
+This function saves the midpoints and endpoints of the cage edges with the corresponding outward normals to a file. The file can be saved in either OBJ or TRI format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to save the normal information to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). In case of failure, the line number where the error occurred is returned. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cage__deform__gc__2_d__3_d_8h}{cage\+\_\+deform\+\_\+gc\+\_\+2\+D\+\_\+3\+D.\+h}}\item 
+cage\+\_\+deform\+\_\+gc\+\_\+2\+D\+\_\+3\+D.\+cpp\end{DoxyCompactItemize}

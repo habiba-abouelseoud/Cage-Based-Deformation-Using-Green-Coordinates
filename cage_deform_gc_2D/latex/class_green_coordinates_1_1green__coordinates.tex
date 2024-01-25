@@ -1,0 +1,193 @@
+\hypertarget{class_green_coordinates_1_1green__coordinates}{}\doxysection{Green\+Coordinates\+::green\+\_\+coordinates Class Reference}
+\label{class_green_coordinates_1_1green__coordinates}\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+
+
+Abstract base class for Green coordinates deformation.  
+
+
+
+
+{\ttfamily \#include $<$cage\+\_\+deform\+\_\+gc\+\_\+2\+D\+\_\+3\+D.\+h$>$}
+
+Inheritance diagram for Green\+Coordinates\+::green\+\_\+coordinates\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_green_coordinates_1_1green__coordinates}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a53ff713519d82959a0ae708cc22da66c}\label{class_green_coordinates_1_1green__coordinates_a53ff713519d82959a0ae708cc22da66c}} 
+{\bfseries green\+\_\+coordinates} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates}{green\+\_\+coordinates}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a0a8dbeac1c7d5b415d45ef0cd3e0516f}\label{class_green_coordinates_1_1green__coordinates_a0a8dbeac1c7d5b415d45ef0cd3e0516f}} 
+virtual {\bfseries $\sim$green\+\_\+coordinates} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates}{green\+\_\+coordinates}}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a0bf41d8d967bb0f9b8de5a2bf4dbd346}{load\+\_\+model\+\_\+points}} (const char $\ast$file)=0
+\begin{DoxyCompactList}\small\item\em Load model points from a file. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a190bc51085ca7845beea0d86eaa09d33}{load\+\_\+cage}} (const char $\ast$file)=0
+\begin{DoxyCompactList}\small\item\em Load the cage from a file. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a1cb2c42957c3002d925716583011fd24}{calculate\+\_\+green\+\_\+coords}} ()=0
+\begin{DoxyCompactList}\small\item\em Calculate the Green coordinates. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a6f178cf4ada3f518dcfd60ebb47af5ec}{move\+\_\+cage}} (const size\+\_\+t id, const double $\ast$dx, bool disp)=0
+\begin{DoxyCompactList}\small\item\em Move a cage node by a given displacement. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a8ff594b63cb2e34d6de05f41947426c9}{deform}} ()=0
+\begin{DoxyCompactList}\small\item\em Perform the deformation using Green coordinates. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a16c7b31f57e8c98d91057e154afb10a7}{save\+To\+File}} (const char $\ast$file)=0
+\begin{DoxyCompactList}\small\item\em Save the deformed model to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a02dd03d9f443f33b2118a8d964ab19b8}{calc\+\_\+outward\+\_\+normal}} ()=0
+\begin{DoxyCompactList}\small\item\em Calculate the outward normal vectors of the cage elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for Green coordinates deformation. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a02dd03d9f443f33b2118a8d964ab19b8}\label{class_green_coordinates_1_1green__coordinates_a02dd03d9f443f33b2118a8d964ab19b8}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!calc\_outward\_normal@{calc\_outward\_normal}}
+\index{calc\_outward\_normal@{calc\_outward\_normal}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{calc\_outward\_normal()}{calc\_outward\_normal()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::calc\+\_\+outward\+\_\+normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Calculate the outward normal vectors of the cage elements. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a1cb2c42957c3002d925716583011fd24}\label{class_green_coordinates_1_1green__coordinates_a1cb2c42957c3002d925716583011fd24}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!calculate\_green\_coords@{calculate\_green\_coords}}
+\index{calculate\_green\_coords@{calculate\_green\_coords}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{calculate\_green\_coords()}{calculate\_green\_coords()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::calculate\+\_\+green\+\_\+coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculate the Green coordinates. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a723719d27ffe6a99594dc576209589e0}{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d}}, and \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_ac35be07aeea5457185b6103c793027a9}{Green\+Coordinates\+::green\+\_\+coords\+\_\+3d}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a8ff594b63cb2e34d6de05f41947426c9}\label{class_green_coordinates_1_1green__coordinates_a8ff594b63cb2e34d6de05f41947426c9}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!deform@{deform}}
+\index{deform@{deform}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{deform()}{deform()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::deform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Perform the deformation using Green coordinates. 
+
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a3bd4fea43cb1e4f784a0c57af9c3f28e}{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d}}, and \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a7d1041ce8c1745b0141911f17215b671}{Green\+Coordinates\+::green\+\_\+coords\+\_\+3d}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a190bc51085ca7845beea0d86eaa09d33}\label{class_green_coordinates_1_1green__coordinates_a190bc51085ca7845beea0d86eaa09d33}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!load\_cage@{load\_cage}}
+\index{load\_cage@{load\_cage}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{load\_cage()}{load\_cage()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::load\+\_\+cage (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load the cage from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to load the cage from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a93296095bef2a2ab8339cd89f7eb05e5}{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d}}, and \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a0292fe953861553914769c44589a6b63}{Green\+Coordinates\+::green\+\_\+coords\+\_\+3d}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a0bf41d8d967bb0f9b8de5a2bf4dbd346}\label{class_green_coordinates_1_1green__coordinates_a0bf41d8d967bb0f9b8de5a2bf4dbd346}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!load\_model\_points@{load\_model\_points}}
+\index{load\_model\_points@{load\_model\_points}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{load\_model\_points()}{load\_model\_points()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::load\+\_\+model\+\_\+points (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Load model points from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to load the model points from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_aa287a7a6013133ad1365c40a4bffd53a}{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d}}, and \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a7ec1ae2f4bfa8adf63da5b93a6841d3e}{Green\+Coordinates\+::green\+\_\+coords\+\_\+3d}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a6f178cf4ada3f518dcfd60ebb47af5ec}\label{class_green_coordinates_1_1green__coordinates_a6f178cf4ada3f518dcfd60ebb47af5ec}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!move\_cage@{move\_cage}}
+\index{move\_cage@{move\_cage}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{move\_cage()}{move\_cage()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::move\+\_\+cage (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{id,  }\item[{const double $\ast$}]{dx,  }\item[{bool}]{disp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Move a cage node by a given displacement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the cage node to move. \\
+\hline
+{\em dx} & The displacement vector \mbox{[}dx, dy\mbox{]}. \\
+\hline
+{\em disp} & Whether to apply the displacement (true) or set the position directly (false). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a5a0cd10a717a8932c13330d7aeb443cd}{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d}}, and \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_ac11d3c99782dd28e04dc27486d996bd8}{Green\+Coordinates\+::green\+\_\+coords\+\_\+3d}}.
+
+\mbox{\Hypertarget{class_green_coordinates_1_1green__coordinates_a16c7b31f57e8c98d91057e154afb10a7}\label{class_green_coordinates_1_1green__coordinates_a16c7b31f57e8c98d91057e154afb10a7}} 
+\index{GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!GreenCoordinates::green\_coordinates@{GreenCoordinates::green\_coordinates}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily virtual int Green\+Coordinates\+::green\+\_\+coordinates\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Save the deformed model to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to save the deformed model to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation (0 for success, non-\/zero for failure). 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a847d1eea5dad2ec79426f7bef89090d5}{Green\+Coordinates\+::green\+\_\+coords\+\_\+2d}}, and \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_ac2fccc12d73a69a2a3992092c475bbec}{Green\+Coordinates\+::green\+\_\+coords\+\_\+3d}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cage__deform__gc__2_d__3_d_8h}{cage\+\_\+deform\+\_\+gc\+\_\+2\+D\+\_\+3\+D.\+h}}\end{DoxyCompactItemize}
