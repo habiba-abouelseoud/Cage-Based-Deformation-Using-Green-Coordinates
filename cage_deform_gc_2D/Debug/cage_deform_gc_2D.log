@@ -1,0 +1,31 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (cage_deform_gc_2D.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  cage_deform_gc_2D_3D.cpp
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(196,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(253,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(320,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(321,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(352,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(563,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(577,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(582,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(584,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(656,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(670,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(675,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(742,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(750,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(767,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(772,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1025,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1059,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1073,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1078,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1080,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1123,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1128,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(1130,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\packages\Eigen.3.3.3\build\native\include\Eigen\src\Core\PlainObjectBase.h(311,7): error C2338: YOU_TRIED_CALLING_A_VECTOR_METHOD_ON_A_MATRIX
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\packages\Eigen.3.3.3\build\native\include\Eigen\src\Core\PlainObjectBase.h(310): message : while compiling class template member function 'void Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1>>::resize(Eigen::Index)'
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.cpp(936): message : see reference to function template instantiation 'void Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1>>::resize(Eigen::Index)' being compiled
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\packages\Eigen.3.3.3\build\native\include\Eigen\src\Core\Matrix.h(180): message : see reference to class template instantiation 'Eigen::PlainObjectBase<Eigen::Matrix<double,-1,-1,0,-1,-1>>' being compiled
+C:\Users\habib\OneDrive\Desktop\ALL thesis docs\cage_deform_gc_2D\cage_deform_gc_2D\cage_deform_gc_2D_3D.h(235): message : see reference to class template instantiation 'Eigen::Matrix<double,-1,-1,0,-1,-1>' being compiled
