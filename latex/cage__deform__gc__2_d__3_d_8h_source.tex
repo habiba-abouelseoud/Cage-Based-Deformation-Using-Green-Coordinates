@@ -1,0 +1,143 @@
+\hypertarget{cage__deform__gc__2_d__3_d_8h_source}{}\doxysection{cage\+\_\+deform\+\_\+gc\+\_\+2\+D\+\_\+3\+D.\+h}
+\mbox{\hyperlink{cage__deform__gc__2_d__3_d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//cage\_deform\_gc\_2D\_3D.h}}
+\DoxyCodeLine{2 \textcolor{comment}{//Copyright © Habibatallah Abuelseoud.}}
+\DoxyCodeLine{3 \textcolor{comment}{//Created by Habibatallah Abouelseoud 19/11/2022.}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef CAGE\_DEFORM\_GC\_2D}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define CAGE\_DEFORM\_GC\_2D}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <Eigen/Sparse>}}
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }GreenCoordinates \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21     \textcolor{keyword}{class }\mbox{\hyperlink{class_green_coordinates_1_1green__coordinates}{green\_coordinates}}}
+\DoxyCodeLine{22     \{}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a53ff713519d82959a0ae708cc22da66c}{green\_coordinates}}() \{\}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{32         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a0a8dbeac1c7d5b415d45ef0cd3e0516f}{\string~green\_coordinates}}() \{\}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{39         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a0bf41d8d967bb0f9b8de5a2bf4dbd346}{load\_model\_points}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file) = 0;}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a190bc51085ca7845beea0d86eaa09d33}{load\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file) = 0;}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a1cb2c42957c3002d925716583011fd24}{calculate\_green\_coords}}() = 0;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{61         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a6f178cf4ada3f518dcfd60ebb47af5ec}{move\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{double}* dx, \textcolor{keywordtype}{bool} disp) = 0;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a8ff594b63cb2e34d6de05f41947426c9}{deform}}() = 0;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a16c7b31f57e8c98d91057e154afb10a7}{saveToFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file) = 0;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{81         \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates_a02dd03d9f443f33b2118a8d964ab19b8}{calc\_outward\_normal}}() = 0;}
+\DoxyCodeLine{82     \};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{87     \textcolor{keyword}{class }\mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d}{green\_coords\_2d}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates}{green\_coordinates}}}
+\DoxyCodeLine{88     \{}
+\DoxyCodeLine{89     \textcolor{keyword}{public}:}
+\DoxyCodeLine{93         \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a299e40a333997ed8955c91f6821d098c}{green\_coords\_2d}}();}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{105         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_aa287a7a6013133ad1365c40a4bffd53a}{load\_model\_points}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{119         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a93296095bef2a2ab8339cd89f7eb05e5}{load\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 }
+\DoxyCodeLine{133         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a723719d27ffe6a99594dc576209589e0}{calculate\_green\_coords}}();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{148         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a5a0cd10a717a8932c13330d7aeb443cd}{move\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{double}* dx, \textcolor{keywordtype}{bool} disp);}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{167         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a3bd4fea43cb1e4f784a0c57af9c3f28e}{deform}}();}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{180         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a847d1eea5dad2ec79426f7bef89090d5}{saveToFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{192         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a8101cb424e11c295ca756f3c07d16ec3}{saveToFile\_normal}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{205         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a5ce3d501b98b792da57d10c491ddcd2e}{saveToFile\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{218         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a87e1d7af1f4d8be4c5b1a2f4baa14444}{calculate\_outward\_normal}}();}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{231         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__2d_a3540a7637a1151ea07b33b828ff078f7}{calculate\_cage\_edge\_length}}(Eigen::VectorXd\& len);}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233     \textcolor{keyword}{private}:}
+\DoxyCodeLine{234         Eigen::MatrixXi cell\_;}
+\DoxyCodeLine{235         Eigen::MatrixXd nods\_;}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237         Eigen::MatrixXi cage\_cell\_;}
+\DoxyCodeLine{238         Eigen::MatrixXd cage\_nods\_;}
+\DoxyCodeLine{239         Eigen::MatrixXd cage\_normal\_;}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241         Eigen::VectorXd rest\_len\_;}
+\DoxyCodeLine{242         Eigen::VectorXd curr\_len\_;}
+\DoxyCodeLine{243         Eigen::MatrixXd phi\_;}
+\DoxyCodeLine{244         Eigen::MatrixXd psi\_;}
+\DoxyCodeLine{245     \};}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 }
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251 }
+\DoxyCodeLine{255     \textcolor{keyword}{class }\mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d}{green\_coords\_3d}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_green_coordinates_1_1green__coordinates}{green\_coordinates}}}
+\DoxyCodeLine{256     \{}
+\DoxyCodeLine{257     \textcolor{keyword}{public}:}
+\DoxyCodeLine{258         \textcolor{keyword}{typedef} Eigen::Matrix<size\_t, Eigen::Dynamic, Eigen::Dynamic> mati\_t;}
+\DoxyCodeLine{259         \textcolor{keyword}{typedef} Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> matd\_t;}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 }
+\DoxyCodeLine{265         \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a3bb1741fbd2d61687e57e4bc7290faba}{green\_coords\_3d}}();}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{280         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a7ec1ae2f4bfa8adf63da5b93a6841d3e}{load\_model\_points}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{281 }
+\DoxyCodeLine{297         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a0292fe953861553914769c44589a6b63}{load\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{307         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_ac35be07aeea5457185b6103c793027a9}{calculate\_green\_coords}}();}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{319         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_ac11d3c99782dd28e04dc27486d996bd8}{move\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{size\_t} \textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{double}* dx, \textcolor{keywordtype}{bool} disp);}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{330         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a7d1041ce8c1745b0141911f17215b671}{deform}}();}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{343         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_ac2fccc12d73a69a2a3992092c475bbec}{saveToFile}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{356         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_aa8c46e65b2e2b418938e228f92b3c5ea}{saveToFile\_normal}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{370         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a0b263ac02e6ebca33c437db4a70973e2}{saveToFile\_cage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* file);}
+\DoxyCodeLine{371 }
+\DoxyCodeLine{372     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{382         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a421a881705760d9bc982c140e9a6fcb9}{calculate\_outward\_normal}}();}
+\DoxyCodeLine{383 }
+\DoxyCodeLine{384 }
+\DoxyCodeLine{396         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a358338b065de4279deabee8f511b1a2e}{calculate\_stretch\_ratio}}(matd\_t\& s);}
+\DoxyCodeLine{397         \textcolor{comment}{//double calculateFaceArea(const matd\_t\& vt);}}
+\DoxyCodeLine{398 }
+\DoxyCodeLine{409         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a4a0f912e37f4d8537435a3f365118867}{calculate\_cage\_edge}}(matd\_t\& uv);}
+\DoxyCodeLine{410 }
+\DoxyCodeLine{411 }
+\DoxyCodeLine{424         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_green_coordinates_1_1green__coords__3d_a0c1c2b6806baf15d9fe1afd4034d9fd0}{GCTriInt}}(\textcolor{keyword}{const} matd\_t\& p, \textcolor{keyword}{const} matd\_t\& v1,}
+\DoxyCodeLine{425             \textcolor{keyword}{const} matd\_t\& v2, \textcolor{keyword}{const} matd\_t\& eta);}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{427     \textcolor{keyword}{private}:}
+\DoxyCodeLine{428 }
+\DoxyCodeLine{429         mati\_t cell\_;}
+\DoxyCodeLine{430         matd\_t nods\_;}
+\DoxyCodeLine{431 }
+\DoxyCodeLine{432         mati\_t cage\_cell\_;}
+\DoxyCodeLine{433         matd\_t cage\_nods\_;}
+\DoxyCodeLine{434         matd\_t cage\_normal\_;}
+\DoxyCodeLine{435         matd\_t cage\_rest\_uv\_;}
+\DoxyCodeLine{436         matd\_t cage\_curr\_uv\_;}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{438         matd\_t rest\_area\_;}
+\DoxyCodeLine{439         matd\_t phi\_;}
+\DoxyCodeLine{440         matd\_t psi\_;}
+\DoxyCodeLine{441     \};}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{443 }
+\DoxyCodeLine{444 \}}
+\DoxyCodeLine{445 }
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447 \textcolor{preprocessor}{\#endif }}
+
+\end{DoxyCode}
